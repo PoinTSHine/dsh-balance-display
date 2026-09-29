@@ -1,0 +1,9 @@
+# dsh-balance-display bundle patch
+#
+# Declared by `dsh.bundle.patch` in package.json. `dsh plugin --profile web add`
+# appends `dsh-balance-display` to the profile's bundle stack, and this patch
+# mounts the server-side plugin row (settings namespace + the balance route).
+# The browser half rides the same row through `dsh.client`.
+- insert:
+    - id: balance-display
+      name: 'dsh-balance-display'
